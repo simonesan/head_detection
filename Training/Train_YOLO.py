@@ -150,7 +150,7 @@ history = model.fit_generator(
 model.save_weights(os.path.join(log_dir, "trained_weights_stage_1.h5"))
 
 with open(os.path.join(log_dir, "history_stage_1.pkl"), 'wb') as history_file:
-    pickle.dump(history, history_file)
+    pickle.dump(history.history, history_file)
 
 # Unfreeze and continue training, to fine-tune.
 # Train longer if the result is unsatisfactory.
@@ -186,4 +186,4 @@ history = model.fit_generator(
 model.save_weights(os.path.join(log_dir, "trained_weights_final.h5"))
 
 with open(os.path.join(log_dir, "history_final.pkl"), 'wb') as history_file:
-    pickle.dump(history, history_file)
+    pickle.dump(history.history, history_file)

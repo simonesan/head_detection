@@ -6,8 +6,3 @@ Data/Source_Images/Test_Images/*
 Data/Source_Images/Training_Images/*
 Data/Source_Images/Test_Image_Detection_Results/*
 Data/Model_Weights/*/
-Data/Model_Weights/trained_weights_final.h5
-Data/Model_Weights/trained_weights_stage_1.h5
-Training/src/keras_yolo3/yolo.h5
-Training/src/keras_yolo3/yolov3.weights
-Data/Model_Weights/checkpoint.h5
