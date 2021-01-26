@@ -13,9 +13,22 @@ from keras.callbacks import (
     ReduceLROnPlateau,
     EarlyStopping,
 )
+import os 
+import sys 
 
-from yolo3.model import preprocess_true_boxes, yolo_body, tiny_yolo_body, yolo_loss
-from yolo3.utils import get_random_data
+def get_parent_dir(n=1):
+    """returns the n-th parent dicrectory of the current
+    working directory"""
+    current_path = os.path.dirname(os.path.abspath(__file__))
+    for _ in range(n):
+        current_path = os.path.dirname(current_path)
+    return current_path
+
+src_path = os.path.join(get_parent_dir(1), "Training", "src")
+sys.path.append(src_path)
+
+from keras_yolo3.yolo3.model import preprocess_true_boxes, yolo_body, tiny_yolo_body, yolo_loss
+from keras_yolo3.yolo3.utils import get_random_data
 
 
 def _main():
@@ -281,7 +294,7 @@ def create_tiny_model(
     return model
 
 
-def data_generator(annotation_lines, batch_size, input_shape, anchors, num_classes):
+def data_generator(annotation_lines, batch_size, input_shape, anchors, num_classes, useMedianFilter = False, useHistogramEqualisation = False):
     """data generator for fit_generator"""
     n = len(annotation_lines)
     i = 0
@@ -291,7 +304,8 @@ def data_generator(annotation_lines, batch_size, input_shape, anchors, num_class
         for b in range(batch_size):
             if i == 0:
                 np.random.shuffle(annotation_lines)
-            image, box = get_random_data(annotation_lines[i], input_shape, random=True)
+            image, box = get_random_data(annotation_lines[i], input_shape, random=True, 
+                                         useMedianFilter = useMedianFilter, useHistogramEqualisation = useHistogramEqualisation)
             image_data.append(image)
             box_data.append(box)
             i = (i + 1) % n
@@ -302,13 +316,13 @@ def data_generator(annotation_lines, batch_size, input_shape, anchors, num_class
 
 
 def data_generator_wrapper(
-    annotation_lines, batch_size, input_shape, anchors, num_classes
+    annotation_lines, batch_size, input_shape, anchors, num_classes, useMedianFilter =False, useHistogramEqualisation = False
 ):
     n = len(annotation_lines)
     if n == 0 or batch_size <= 0:
         return None
     return data_generator(
-        annotation_lines, batch_size, input_shape, anchors, num_classes
+        annotation_lines, batch_size, input_shape, anchors, num_classes,useMedianFilter,useHistogramEqualisation
     )
 
 

@@ -10,6 +10,8 @@ import numpy as np
 import os
 from matplotlib.colors import rgb_to_hsv, hsv_to_rgb
 from PIL import Image, ImageFont, ImageDraw
+from PIL import ImageFilter
+from PIL import ImageOps
 from timeit import default_timer as timer
 from os import path, makedirs
 import os
@@ -17,7 +19,7 @@ import os
 min_logo_size = (10, 10)
 
 
-def detect_object(yolo, img_path, save_img, save_img_path="./", postfix=""):
+def detect_object(yolo, img_path, save_img, save_img_path="./", postfix="", useMedianFilter = False, useHistogramEqualisation = False):
     """
     Call YOLO logo detector on input image, optionally save resulting image.
 
@@ -31,6 +33,7 @@ def detect_object(yolo, img_path, save_img, save_img_path="./", postfix=""):
       prediction: list of bounding boxes in format (xmin,ymin,xmax,ymax,class_id,confidence)
       image: unaltered input image as (H,W,C) array
     """
+    #read image
     try:
         image = Image.open(img_path)
         if image.mode != "RGB":
@@ -39,10 +42,19 @@ def detect_object(yolo, img_path, save_img, save_img_path="./", postfix=""):
     except:
         print("File Open Error! Try again!")
         return None, None
-
+    
+    #optionally transfom image
+    if useMedianFilter:
+        image = image.filter(ImageFilter.MedianFilter(size=3))
+    
+    if useHistogramEqualisation:
+        image = ImageOps.equalize(image)
+    
+    #predict
     prediction, new_image = yolo.detect_image(image)
 
     img_out = postfix.join(os.path.splitext(os.path.basename(img_path)))
+    #save image with boxes
     if save_img:
         new_image.save(os.path.join(save_img_path, img_out))
 

@@ -7,6 +7,9 @@ from PIL import Image
 import numpy as np
 from matplotlib.colors import rgb_to_hsv, hsv_to_rgb
 import re
+from scipy import signal 
+from PIL import ImageFilter
+from PIL import ImageOps
 
 
 def compose(*funcs):
@@ -167,7 +170,7 @@ def resize_image(image, input_width, input_height, jitter):
     new_image.paste(image, (dx, dy))
     
     return new_image, new_width, new_height, dx, dy
-    
+        
     
 # TODO: update parameter list
 def get_random_data(annotation_line,
@@ -179,6 +182,8 @@ def get_random_data(annotation_line,
     sat=1.5,
     val=1.5,
     proc_img=True,
+    useMedianFilter = False, 
+    useHistogramEqualisation =False
 ):
     # random preprocessing for real-time data augmentation
 
@@ -201,8 +206,16 @@ def get_random_data(annotation_line,
     if rand() < 0.1:
         image_data = invert_image(image_data)
         
+    if useMedianFilter:
+        image = image.filter(ImageFilter.MedianFilter(size=3))
+    
+    if useHistogramEqualisation:
+        image = ImageOps.equalize(image)
+        
     box_data = correct_boxes(box, max_boxes, image_width, image_height,
                              new_width, new_height, dx, dy,
                              input_width, input_height, flip)
         
     return image_data, box_data
+
+

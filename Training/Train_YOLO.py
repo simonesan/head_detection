@@ -41,19 +41,21 @@ from keras_yolo3.yolo3.model import (
     tiny_yolo_body,
     yolo_loss,
 )
-from keras_yolo3.yolo3.utils import get_random_data
+from keras_yolo3.yolo3.utils import (
+    get_random_data
+)
+from keras_yolo3.train import (
+    get_classes,
+    get_anchors,
+    create_model,
+    data_generator,
+    data_generator_wrapper
+)
 from PIL import Image
 from time import time
 import tensorflow.compat.v1 as tf
 import pickle
 
-from Train_Utils import (
-    get_classes,
-    get_anchors,
-    create_model,
-    data_generator,
-    data_generator_wrapper,
-)
 
 # -----------------------------------------------------------------------------
 keras_path = os.path.join(src_path, "keras_yolo3")
@@ -68,10 +70,12 @@ log_dir = Model_Folder
 anchors_path = os.path.join(keras_path, "model_data", "yolo_anchors.txt")
 weights_path = os.path.join(keras_path, "yolo.h5")
 
-epochs = 70
+epochs = 1
 val_split = 0.1
 batch_size = 4
 num_classes = 1
+useMedianFilter = True
+useHistogramEqualisation = False
 
 # -----------------------------------------------------------------------------
 
@@ -136,20 +140,22 @@ print(
 
 history = model.fit_generator(
     data_generator_wrapper(
-        lines[:num_train], batch_size, input_shape, anchors, num_classes
+        lines[:num_train], batch_size, input_shape, anchors, num_classes,useMedianFilter, useHistogramEqualisation
     ),
     steps_per_epoch=max(1, num_train // batch_size),
     validation_data=data_generator_wrapper(
-        lines[num_train:], batch_size, input_shape, anchors, num_classes
+        lines[num_train:], batch_size, input_shape, anchors, num_classes,useMedianFilter, useHistogramEqualisation
     ),
     validation_steps=max(1, num_val // batch_size),
     epochs=epoch1,
     initial_epoch=0,
     callbacks=frozen_callbacks,
 )
-model.save_weights(os.path.join(log_dir, "trained_weights_stage_1.h5"))
+model.save_weights(os.path.join(log_dir, "trained_weights_stage_1_Median_"+str(useMedianFilter) + 
+                                "HistogramEq_"+str(useHistogramEqualisation) + ".h5"))
 
-with open(os.path.join(log_dir, "history_stage_1.pkl"), 'wb') as history_file:
+with open(os.path.join(log_dir, "history_stage_1_Median_"+str(useMedianFilter) + 
+                       "HistogramEq_"+str(useHistogramEqualisation) + ".pkl"), 'wb') as history_file:
     pickle.dump(history.history, history_file)
 
 # Unfreeze and continue training, to fine-tune.
@@ -172,18 +178,18 @@ print(
 )
 history = model.fit_generator(
     data_generator_wrapper(
-        lines[:num_train], batch_size, input_shape, anchors, num_classes
+        lines[:num_train], batch_size, input_shape, anchors, num_classes,useMedianFilter, useHistogramEqualisation
     ),
     steps_per_epoch=max(1, num_train // batch_size),
     validation_data=data_generator_wrapper(
-        lines[num_train:], batch_size, input_shape, anchors, num_classes
+        lines[num_train:], batch_size, input_shape, anchors, num_classes,useMedianFilter, useHistogramEqualisation
     ),
     validation_steps=max(1, num_val // batch_size),
     epochs=epoch1 + epoch2,
     initial_epoch=epoch1,
     callbacks=full_callbacks,
 )
-model.save_weights(os.path.join(log_dir, "trained_weights_final.h5"))
+model.save_weights(os.path.join(log_dir, "trained_weights_final_Median_"+str(useMedianFilter) + "HistogramEq_"+str(useHistogramEqualisation) + ".h5"))
 
-with open(os.path.join(log_dir, "history_final.pkl"), 'wb') as history_file:
+with open(os.path.join(log_dir, "history_final_Median_"+str(useMedianFilter) + "HistogramEq_"+str(useHistogramEqualisation) + ".pkl"), 'wb') as history_file:
     pickle.dump(history.history, history_file)

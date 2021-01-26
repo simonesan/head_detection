@@ -30,11 +30,13 @@ import utils
 import pandas as pd
 import numpy as np
 import random
-from Train_Utils import get_anchors
+from keras_yolo3.train import get_anchors
 
 # --------------------------------------------------------------------------------------
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+useMedianFilter = True
+useHistogramEqualisation = True
 
 # Set up folder names for default values
 data_folder = os.path.join(get_parent_dir(n=1), "Data")
@@ -44,11 +46,11 @@ image_folder = os.path.join(data_folder, "Source_Images")
 image_test_folder = os.path.join(image_folder, "Test_Images")
 
 detection_results_folder = os.path.join(image_folder, "Test_Image_Detection_Results")
-detection_results_file = os.path.join(detection_results_folder, "Detection_Results.csv")
+detection_results_file = os.path.join(detection_results_folder, "Detection_Results_Median_"+str(useMedianFilter) + "HistogramEq_"+str(useHistogramEqualisation) + ".csv")
 
 model_folder = os.path.join(data_folder, "Model_Weights")
 
-model_weights = os.path.join(model_folder, "trained_weights_final.h5")
+model_weights = os.path.join(model_folder, "trained_weights_final_Median_"+str(useMedianFilter) + "HistogramEq_"+str(useHistogramEqualisation) + ".h5")
 model_classes = os.path.join(model_folder, "data_classes.txt")
 
 anchors_path = os.path.join(src_path, "keras_yolo3", "model_data", "yolo_anchors.txt")
@@ -126,6 +128,8 @@ if input_image_paths:
             save_img=save_img,
             save_img_path=detection_results_folder,
             postfix="_head",
+            useMedianFilter = useMedianFilter, 
+            useHistogramEqualisation = useHistogramEqualisation
         )
         y_size, x_size, _ = np.array(image).shape
         for single_prediction in prediction:
