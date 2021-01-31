@@ -6,3 +6,8 @@ Data/Source_Images/Test_Images/*
 Data/Source_Images/Training_Images/*
 Data/Source_Images/Test_Image_Detection_Results/*
 Data/Model_Weights/*/
+
+*.h5
+*.weights
+*.jpg
+*.png

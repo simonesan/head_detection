@@ -77,6 +77,9 @@ num_classes = 1
 useMedianFilter = True
 useHistogramEqualisation = False
 
+#fileSuffix = '_noAug'
+fileSuffix = '_Median_'+str(useMedianFilter) + 'HistogramEq_'+str(useHistogramEqualisation)
+
 # -----------------------------------------------------------------------------
 
     
@@ -151,11 +154,9 @@ history = model.fit_generator(
     initial_epoch=0,
     callbacks=frozen_callbacks,
 )
-model.save_weights(os.path.join(log_dir, "trained_weights_stage_1_Median_"+str(useMedianFilter) + 
-                                "HistogramEq_"+str(useHistogramEqualisation) + ".h5"))
+model.save_weights(os.path.join(log_dir, "trained_weights_stage_1"+ fileSuffix+ ".h5"))
 
-with open(os.path.join(log_dir, "history_stage_1_Median_"+str(useMedianFilter) + 
-                       "HistogramEq_"+str(useHistogramEqualisation) + ".pkl"), 'wb') as history_file:
+with open(os.path.join(log_dir, "history_stage_1"+ fileSuffix+ ".pkl"), 'wb') as history_file:
     pickle.dump(history.history, history_file)
 
 # Unfreeze and continue training, to fine-tune.
@@ -189,7 +190,7 @@ history = model.fit_generator(
     initial_epoch=epoch1,
     callbacks=full_callbacks,
 )
-model.save_weights(os.path.join(log_dir, "trained_weights_final_Median_"+str(useMedianFilter) + "HistogramEq_"+str(useHistogramEqualisation) + ".h5"))
+model.save_weights(os.path.join(log_dir, "trained_weights_final"+ fileSuffix+ ".h5"))
 
-with open(os.path.join(log_dir, "history_final_Median_"+str(useMedianFilter) + "HistogramEq_"+str(useHistogramEqualisation) + ".pkl"), 'wb') as history_file:
+with open(os.path.join(log_dir, "history_final"+ fileSuffix+ ".pkl"), 'wb') as history_file:
     pickle.dump(history.history, history_file)

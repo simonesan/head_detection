@@ -15,11 +15,13 @@ from PIL import ImageOps
 from timeit import default_timer as timer
 from os import path, makedirs
 import os
+import pandas as pd
 
 min_logo_size = (10, 10)
 
 
-def detect_object(yolo, img_path, save_img, save_img_path="./", postfix="", useMedianFilter = False, useHistogramEqualisation = False):
+
+def detect_object(yolo, img_path, save_img, save_img_path="./", postfix="", useMedianFilter = False, useHistogramEqualisation = False, flip = False):
     """
     Call YOLO logo detector on input image, optionally save resulting image.
 
@@ -38,7 +40,7 @@ def detect_object(yolo, img_path, save_img, save_img_path="./", postfix="", useM
         image = Image.open(img_path)
         if image.mode != "RGB":
             image = image.convert("RGB")
-        image_array = np.array(image)
+        
     except:
         print("File Open Error! Try again!")
         return None, None
@@ -49,13 +51,20 @@ def detect_object(yolo, img_path, save_img, save_img_path="./", postfix="", useM
     
     if useHistogramEqualisation:
         image = ImageOps.equalize(image)
+       
+    if flip:
+        image = image.transpose(Image.FLIP_TOP_BOTTOM)  
+        
+    image_array = np.array(image)
     
     #predict
     prediction, new_image = yolo.detect_image(image)
 
     img_out = postfix.join(os.path.splitext(os.path.basename(img_path)))
     #save image with boxes
-    if save_img:
+    if save_img and flip:
+        new_image.save(os.path.join(save_img_path, img_out[:-4]+"_flip.png"))
+    if save_img and not flip:
         new_image.save(os.path.join(save_img_path, img_out))
 
     return prediction, image_array

@@ -185,6 +185,46 @@ def get_random_data(annotation_line,
     useMedianFilter = False, 
     useHistogramEqualisation =False
 ):
+    
+    if not random:
+        # This type of splitting makes sure that it is compatible with spaces in folder names
+        # We split at the first space that is followed by a number
+        tmp_split = re.split("( \d)", annotation_line, maxsplit=1)
+        if len(tmp_split) > 2:
+            line = tmp_split[0], tmp_split[1] + tmp_split[2]
+        else:
+            line = tmp_split
+        image = Image.open(line[0])
+        # The rest of the line includes bounding boxes
+        line = line[1].split(" ")
+        iw, ih = image.size
+        h, w = input_shape
+        box = np.array([np.array(list(map(int, box.split(",")))) for box in line[1:]])
+        # resize image
+        scale = min(w / iw, h / ih)
+        nw = int(iw * scale)
+        nh = int(ih * scale)
+        dx = (w - nw) // 2
+        dy = (h - nh) // 2
+        image_data = 0
+        if proc_img:
+            image = image.resize((nw, nh), Image.BICUBIC)
+            new_image = Image.new("RGB", (w, h), (128, 128, 128))
+            new_image.paste(image, (dx, dy))
+            image_data = np.array(new_image) / 255.0
+
+        # correct boxes
+        box_data = np.zeros((max_boxes, 5))
+        if len(box) > 0:
+            np.random.shuffle(box)
+            if len(box) > max_boxes:
+                box = box[:max_boxes]
+            box[:, [0, 2]] = box[:, [0, 2]] * scale + dx
+            box[:, [1, 3]] = box[:, [1, 3]] * scale + dy
+            box_data[: len(box)] = box
+
+        return image_data, box_data
+    
     # random preprocessing for real-time data augmentation
 
     image, box = get_image_and_boxes(annotation_line)
