@@ -4,7 +4,7 @@ Data/human head
 Data/darknet_obj_names.txt
 Data/Source_Images/Test_Images/*
 Data/Source_Images/Training_Images/*
-Data/Source_Images/Training_Images-Kopie/*
+Data/Source_Images/Test_Images-Kopie/*
 Data/Source_Images/Test_Image_Detection_Results/*
 Data/Model_Weights/*/
 
