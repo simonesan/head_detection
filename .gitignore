@@ -2,7 +2,7 @@
 .ipynb_checkpoints
 Data/human head
 Data/darknet_obj_names.txt
-Data/Source_Images/Test_Images-Kopie/*
+Data/Source_Images/Test_Images - Kopie/*
 Data/Model_Weights/*/
 
 *.h5
