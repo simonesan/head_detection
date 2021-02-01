@@ -1,0 +1,100 @@
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000004f4400f6ec5.jpg 557,122,709,321,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000033469fb48bc1.jpg 403,82,516,233,0 634,108,737,238,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00006c07d2b033d1.jpg 582,171,768,416,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0000b86e2fd18333.jpg 160,10,472,388,0 732,293,942,497,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0000bee39176697a.jpg 642,35,846,280,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0000d01325742829.jpg 480,91,920,685,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0000ee1cc1f4c792.jpg 400,236,767,707,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0001b2b3b13cfbe4.jpg 116,299,237,398,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0001c3e14fe71e81.jpg 83,160,151,235,0 365,157,483,299,0 665,188,812,386,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000266c1e4c17092.jpg 591,58,1016,539,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000335f65ee227cf.jpg 288,5,573,282,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00034cd6adabef6a.jpg 836,300,898,348,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000384c2661cd7a0.jpg 342,253,481,413,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00038a568acc699b.jpg 326,51,581,413,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00039573fc999278.jpg 73,68,274,313,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0004045124254348.jpg 787,44,877,116,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00043138b01e5bc1.jpg 282,463,419,618,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00043d963ac134df.jpg 398,295,768,587,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000497ee2a0fe0e7.jpg 393,81,700,467,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0004b337ac5dcf87.jpg 392,202,552,398,0 535,270,661,447,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0004ca4529c464d0.jpg 3,316,16,330,0 30,316,45,333,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0004fa3aa5bdb9ff.jpg 43,320,76,352,0 141,349,167,363,0 267,335,293,365,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000504c972d8ffd6.jpg 408,231,650,533,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0005176b24d82529.jpg 511,62,680,307,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00058ec5c3f3274f.jpg 187,158,272,273,0 318,103,436,248,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0005f7a1c3ae3c04.jpg 536,288,550,302,0 619,144,819,466,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00067750bd57d634.jpg 255,61,361,192,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0006c0abb5a4a063.jpg 42,102,94,156,0 183,66,217,102,0 423,56,456,97,0 519,64,556,112,0 557,87,618,155,0 621,66,652,111,0 755,65,792,103,0 824,44,855,74,0 878,69,912,100,0 942,80,990,132,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0006fbc76c1f64f8.jpg 279,238,592,595,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000729e74f9c0aa0.jpg 16,328,461,779,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000747cad5f15105.jpg 331,687,450,796,0 20,488,92,548,0 184,480,224,530,0 307,498,351,552,0 384,436,430,480,0 428,525,490,585,0 456,391,505,445,0 578,394,625,445,0 610,456,660,510,0 687,466,739,528,0 804,450,873,525,0 871,463,962,572,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0007ad5c6245a41d.jpg 123,110,491,588,0 657,42,960,469,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0007c754bc4584e7.jpg 398,163,553,359,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000851174d48d3d9.jpg 152,277,240,355,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000858e87c40654a.jpg 333,202,400,298,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0008da619d1fb895.jpg 430,218,485,290,0 516,213,571,274,0 979,319,993,331,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00091b56c3895bf9.jpg 305,100,491,351,0 624,0,705,97,0 777,78,1003,321,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0009324a410005fc.jpg 247,180,376,371,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000999c5837b0342.jpg 891,379,984,460,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0009a4b277c5e5e8.jpg 168,145,476,539,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0009db1659041858.jpg 203,291,437,575,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000a12b69b0de9f2.jpg 150,127,174,160,0 342,97,366,122,0 764,80,784,99,0 880,97,895,113,0 904,80,919,95,0 970,95,994,112,0 972,71,992,88,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000a98aa78afeb18.jpg 198,182,559,478,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000a99f66168fece.jpg 368,80,817,524,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000b5bc07c0c5df7.jpg 526,46,825,407,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000b9a97776b3634.jpg 488,23,675,264,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000be0d53bf53d3d.jpg 419,246,528,365,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000bf35c28badb0d.jpg 643,231,849,488,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c034c59effe6d.jpg 465,262,537,331,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c0d0c3585e157.jpg 404,224,720,682,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c0d3fefe62686.jpg 36,202,432,538,0 72,0,245,122,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c74915c314a34.jpg 184,118,609,696,0 691,273,710,302,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c83fe629badc5.jpg 727,124,858,319,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c929962080df0.jpg 205,60,444,368,0 573,192,824,414,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000c9b15cd1dcd95.jpg 310,117,558,400,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000caf6b38df250f.jpg 134,315,283,494,0 188,156,308,334,0 684,335,850,529,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000d33e40e939293.jpg 583,175,950,453,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000da26daac3381a.jpg 111,307,161,364,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000db8328068a829.jpg 313,123,546,467,0 517,135,732,403,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000de78d19a0be3e.jpg 794,281,903,418,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000e003030ba73ce.jpg 276,76,306,115,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000f75c9dfc977ad.jpg 140,271,186,310,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/000fc3b8ca545905.jpg 71,294,188,387,0 297,3,647,543,0 696,248,748,315,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0010191c92503caf.jpg 315,9,619,420,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0011665172b9a374.jpg 492,220,944,913,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0012b3323b4ee7e7.jpg 389,98,669,403,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0012b929c1f8ab09.jpg 330,12,741,594,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00137e10a0d025bf.jpg 96,273,412,515,0 372,78,588,247,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0013819f855522c4.jpg 72,386,195,516,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001418a77676bd75.jpg 567,229,747,474,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001430c239d9bb77.jpg 159,47,563,638,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0014778c71ad81ae.jpg 389,23,414,57,0 441,202,547,356,0 502,39,523,58,0 734,42,753,62,0 816,57,837,78,0 846,58,862,79,0 914,50,933,73,0 997,41,1012,62,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00147ab54794c29c.jpg 540,318,561,339,0 668,306,682,322,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0014b1cfb41ba93f.jpg 620,176,803,384,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0014e32f1215e489.jpg 99,177,171,273,0 159,280,234,377,0 229,446,312,554,0 239,165,299,247,0 439,169,515,276,0 488,453,563,535,0 509,197,597,316,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00151a35e5fe4d4b.jpg 53,83,418,440,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001545e9db63ad0a.jpg 259,731,470,992,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0015ffbcb862f74c.jpg 13,314,31,329,0 127,279,139,298,0 153,253,167,275,0 174,293,187,312,0 199,305,215,326,0 225,279,242,301,0 342,338,358,359,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001627bf35373371.jpg 148,167,457,497,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0016a58ef51901c2.jpg 563,20,753,244,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0016b8b9812e480d.jpg 617,374,768,576,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001707c4943c4cfc.jpg 23,244,138,396,0 244,286,364,426,0 364,59,903,641,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00171360413ffe0e.jpg 595,150,964,576,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001754e56c0cf100.jpg 360,460,644,757,0 728,336,923,565,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0017ccd0b1865cb8.jpg 849,629,897,666,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0018258f5d56d81f.jpg 439,100,602,302,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00184c722e7e8c87.jpg 454,288,723,512,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00187be4a1f4fa70.jpg 376,7,631,262,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0018a10d8a6e0dd4.jpg 414,60,810,548,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/00191f9a502fd53e.jpg 811,14,919,148,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0019f8ef73bbe608.jpg 492,345,768,678,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/0019fc2321be40dd.jpg 123,121,455,475,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001a3e5d81f82032.jpg 310,185,724,601,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001a512c540796dc.jpg 660,190,942,548,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001b9a1adcf107aa.jpg 51,17,782,729,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001c99731b2496d7.jpg 281,78,556,436,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001d39a9f454a7f3.jpg 421,269,732,619,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001ddaff421aed10.jpg 304,71,545,401,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/001df2c6cdba97b5.jpg 106,128,244,275,0
+C:\Users\Simone\Desktop\COV\Projekt\head_detection\Data/Source_Images/Training_Images/002086ecc108fb26.jpg 637,70,822,280,0 424,204,535,326,0
