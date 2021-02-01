@@ -58,6 +58,8 @@ import pickle
 
 
 # -----------------------------------------------------------------------------
+# path settings
+
 keras_path = os.path.join(src_path, "keras_yolo3")
 Data_Folder = os.path.join(get_parent_dir(1), "Data")
 Image_Folder = os.path.join(Data_Folder, "Source_Images", "Training_Images")
@@ -70,10 +72,14 @@ log_dir = Model_Folder
 anchors_path = os.path.join(keras_path, "model_data", "yolo_anchors.txt")
 weights_path = os.path.join(keras_path, "yolo.h5")
 
+# -------------------------------------------------------------------------
+# change settings here
+
 epochs = 1
 val_split = 0.1
 batch_size = 4
 num_classes = 1
+
 useMedianFilter = True
 useHistogramEqualisation = False
 
@@ -94,6 +100,8 @@ anchors = get_anchors(anchors_path)
 input_shape = (416, 416)  
 epoch1, epoch2 = epochs, epochs
 
+# create model
+
 model = create_model(
         input_shape, anchors, num_classes, freeze_body=2, weights_path=weights_path
     )
@@ -113,6 +121,7 @@ early_stopping = EarlyStopping(
     monitor="val_loss", min_delta=0, patience=10, verbose=1
 )
 
+# read annotations
 
 with open(Annotation_filename) as f:
     lines = f.readlines()
@@ -141,6 +150,8 @@ print(
     )
 )
 
+# stage 1 with freezed layers
+
 history = model.fit_generator(
     data_generator_wrapper(
         lines[:num_train], batch_size, input_shape, anchors, num_classes,useMedianFilter, useHistogramEqualisation
@@ -158,6 +169,8 @@ model.save_weights(os.path.join(log_dir, "trained_weights_stage_1"+ fileSuffix+ 
 
 with open(os.path.join(log_dir, "history_stage_1"+ fileSuffix+ ".pkl"), 'wb') as history_file:
     pickle.dump(history.history, history_file)
+
+# stage 2 (final)    
 
 # Unfreeze and continue training, to fine-tune.
 # Train longer if the result is unsatisfactory.
@@ -177,6 +190,7 @@ print(
         num_train, num_val, batch_size
     )
 )
+
 history = model.fit_generator(
     data_generator_wrapper(
         lines[:num_train], batch_size, input_shape, anchors, num_classes,useMedianFilter, useHistogramEqualisation

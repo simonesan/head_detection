@@ -14,6 +14,7 @@ def get_parent_dir(n=1):
         current_path = os.path.dirname(current_path)
     return current_path
 
+# set paths
 
 src_path = os.path.join(get_parent_dir(1), "Training", "src")
 utils_path = os.path.join(get_parent_dir(1), "Utils")
@@ -33,6 +34,7 @@ import random
 from keras_yolo3.train import get_anchors
 
 # --------------------------------------------------------------------------------------
+# settings
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 useMedianFilter = True
@@ -41,7 +43,10 @@ useHistogramEqualisation = False
 #fileSuffix = '_noAug'
 fileSuffix = '_Median_'+str(useMedianFilter) + 'HistogramEq_'+str(useHistogramEqualisation)
 
+
+# ---------------------------------------------------------------------------------------
 # Set up folder names for default values
+
 data_folder = os.path.join(get_parent_dir(n=1), "Data")
 
 image_folder = os.path.join(data_folder, "Source_Images")
@@ -122,9 +127,11 @@ if input_image_paths:
     start = timer()
     text_out = ""
 
-    # This is for images
+    # This is for image prediction
     for i, img_path in enumerate(input_image_paths):
         print(img_path)
+        
+        # predict image
         prediction, image = detect_object(
             yolo,
             img_path,
@@ -135,6 +142,8 @@ if input_image_paths:
             useHistogramEqualisation = useHistogramEqualisation,
             flip = False
         )
+        
+        # predict flipped image
         predictionFlip, imageFlip = detect_object(
             yolo,
             img_path,
@@ -145,6 +154,8 @@ if input_image_paths:
             useHistogramEqualisation = useHistogramEqualisation,
             flip = True
         )
+        
+        # write prediction into dataframe
         y_size, x_size, _ = np.array(image).shape
         for single_prediction in prediction:
             out_df = out_df.append(
@@ -179,6 +190,7 @@ if input_image_paths:
             len(input_image_paths) / (end - start),
         )
     )
+    # wrte preditions into file
     out_df.to_csv(detection_results_file, index=False)
 
 # Close the current yolo session
